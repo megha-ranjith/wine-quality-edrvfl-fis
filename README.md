@@ -1,11 +1,13 @@
 # 🍷 Wine Quality Classification with edRVFL-FIS
 
-Predict wine quality from laboratory chemical features using advanced AI: an **Ensemble Deep Random Vector Functional Link Neural Network based on Fuzzy Inference System** (edRVFL-FIS).
+Predicts wine quality from laboratory chemical features using advanced AI: an **Ensemble Deep Random Vector Functional Link Neural Network based on Fuzzy Inference System** (edRVFL-FIS).
+
 ---
 
 ## 📖 Project Overview
 
 This project predicts wine quality (good/bad) by combining fuzzy logic with deep ensemble learning. The approach uses fuzzy inference to enrich classical physicochemical features, and an ensemble of deep random vector functional link networks to perform the classification. All code is in Python, and full training/testing/visualization is automated.
+
 
 ---
 
@@ -16,5 +18,88 @@ This project predicts wine quality (good/bad) by combining fuzzy logic with deep
 - **Deep Ensemble Learning**: 5-layer edRVFL network for robust and accurate prediction.
 - **Comprehensive Evaluation**: Reports accuracy, F1-score, confusion matrix, ROC, PR-AUC.
 - **Automated Output**: Saves plots (PNG) and metrics (CSV) to results folder for reporting and further analysis.
+
+
+---
+## 📦 Repository Structure
+```
+wine-quality-edrvfl-fis/
+│
+├── data/ # Empty placeholder (data loaded from UCI)
+├── results/
+│ ├── plots/ # Confusion matrix, ROC, PR curves (PNGs)
+│ └── metrics/ # CSVs with predictions, summary metrics
+│
+├── main.py # Main end-to-end code
+├── requirements.txt # Python requirements
+└── README.md # This file
+```
+
+
+---
+
+## 📝 Usage
+
+### 1. Clone this repo
+```bash
+git clone https://github.com/megha-ranjith/wine-quality-edrvfl-fis.git
+cd wine-quality-edrvfl-fis
+```
+
+### 2. Install requirements
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run the main code
+```bash
+python main.py
+```
+
+All outputs will be saved in the `results/` folder.
+
+---
+
+## 💡 Methodology
+
+- **Dataset**: [UCI Wine Quality Data Set](https://archive.ics.uci.edu/ml/datasets/wine+quality)
+- **Features**: 11 chemical measurements per wine; target = human-rated quality.
+- **Binary Classification**: Quality ≤5 → low; >5 → high.
+- **Fuzzy Rule Creation**: K-Means clustering generates 15 fuzzy "typical patterns."
+- **Fuzzification/Defuzzification**: Each wine's features are converted into fuzzy memberships and recombined into richer features.
+- **Deep Ensemble Learning**: Five stacked edRVFL base models; each layer uses classical + fuzzy features; voting yields the final prediction.
+
+---
+
+## 📈 Outputs & Visualizations
+
+After running, see:
+
+- `results/plots/confusion_matrix.png`
+- `results/plots/roc_curve.png`
+- `results/plots/precision_recall.png`
+- `results/metrics/evaluation_results.csv` (per-wine prediction)
+- `results/metrics/performance_summary.csv` (aggregated metrics)
+
+---
+
+## 📚 Reference
+
+- M. Sajid, M. Tanveer, and P.N. Suganthan.  
+  "Ensemble Deep Random Vector Functional Link Neural Network Based on Fuzzy Inference System."  
+  *IEEE Transactions on Fuzzy Systems*, vol. 33, no. 1, Jan. 2025.  
+  [arXiv version](https://arxiv.org/abs/2510.06278)
+
+---
+
+## 👩‍💻 Author
+
+- Megha Ranjith 
+
+---
+
+## 📝 License
+
+MIT License
 
 ---
