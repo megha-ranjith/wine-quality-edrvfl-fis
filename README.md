@@ -5,7 +5,7 @@ Predicts wine quality from laboratory chemical features using advanced AI: an **
 ---
 
 ## 📖 Project Overview
-
+ 
 This project predicts wine quality (good/bad) by combining fuzzy logic with deep ensemble learning. The approach uses fuzzy inference to enrich classical physicochemical features, and an ensemble of deep random vector functional link networks to perform the classification. All code is in Python, and full training/testing/visualization is automated.
 
 
