@@ -15,7 +15,7 @@ from ucimlrepo import fetch_ucirepo
 import os 
 import time
 
-# Create necessary directories
+# Create necessary directories 
 folders = [
     "data",
     os.path.join("results", "plots"),
